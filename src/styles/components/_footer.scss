@@ -1,0 +1,18 @@
+.footer_content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+}
+
+.tmdb {
+	width: 200px;
+}
+
+.text {
+	font-weight: bold;
+	font-size: 14px;
+}

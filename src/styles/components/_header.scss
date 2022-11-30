@@ -1,0 +1,35 @@
+.header {
+	background-color: $orange;
+}
+
+.header_content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90px;
+}
+
+.logo {
+	width: 75px;
+	margin-left: 15px;
+	& img {
+		size: auto;
+	}
+}
+
+.search_form {
+	width: 40%;
+	margin-right: 15px;
+}
+
+.search_input {
+	border: none;
+	border-bottom: 3px solid $dark;
+	width: 100%;
+	background-color: $orange;
+	outline: none;
+
+	&::placeholder {
+		color: white;
+	}
+}
