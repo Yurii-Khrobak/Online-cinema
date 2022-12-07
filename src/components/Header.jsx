@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = refContainer => {
+const Header = props => {
 	const handleChange = event => {
 		event.target.select()
 	}
@@ -19,6 +19,8 @@ const Header = refContainer => {
 							type='text'
 							//ref={refContainer}
 							onClick={handleChange}
+							value={props.movieID}
+							onChange={event => props.updateData(event.target.value)}
 							id='q'
 						/>
 					</form>

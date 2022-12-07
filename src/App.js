@@ -9,6 +9,10 @@ function App() {
 	const [movie, setMovie] = useState()
 	const [movieID, setMovieID] = useState(122)
 
+	const updateData = value => {
+		setMovieID({ name: value })
+	}
+
 	const refContainer = useRef('search suggestion')
 
 	const url = `https://api.themoviedb.org/3/movie/${movieID}?api_key=df4a9e23de20147837323ac5cc7db615`
@@ -61,7 +65,12 @@ function App() {
 
 	return (
 		<>
-			<Header fetchMovie={fetchMovie} refContainer={refContainer} />
+			<Header
+				fetchMovie={fetchMovie}
+				movieID={movieID}
+				updateData={updateData}
+				refContainer={refContainer}
+			/>
 			{movie ? <Card key={movie.id} movie={movie} /> : <h1>NO MOVIES</h1>}
 			<Footer />
 		</>
